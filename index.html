@@ -1,39 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Page Title</title>
-        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-        <script src="js/main.js"></script>
-        <style src="css/style.css"></style>
-    </head>
-    <body>
-    <h1>калькулятор</h1>
-        <div id="par">
-            <div id="result"></div>
-            
-            <button onclick="a(1)">1</button>
-            <button onclick="a(2)">2</button>
-            <button onclick="a(3)">3</button>
-            <button id="del" onclick="del()">AC</button>
-            <br />
-            <button onclick="a(4)">4</button>
-            <button onclick="a(5)">5</button>
-            <button onclick="a(6)">6</button>
-            <button id="times" onclick="a('*')">×</button>
-            <br />
-            <button onclick="a(7)">7</button>
-            <button onclick="a(8)">8</button>
-            <button onclick="a(9)">9</button>
-            <button class="plus" onclick="a('+')">+</button>
-            <br />
-            <button id="divide" onclick="a('**')" id="f">^</button>
-            <button id="minus" onclick="a('%')" id="f">%</button>
-            <button id="divide" onclick="a('/')" id="f">÷</button>
-            <button id="minus" onclick="a('-')" id="f">–</button><br />
-             <button onclick="a('.')">.</button>
-            <button id="i0" onclick="a(0)">0</button>
-           
-            <button id="ty" onclick="eq()">=</button>
-        </div>
-    </body>
+ <head> 
+  <title>Page Title</title> 
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script> 
+  <script src="js/main.js"></script> 
+  <style>body {
+    background-color:#111;
+}
+#par{
+    position:absolute ;
+    left:50%;
+    top:20%;
+    transform:translate(-50%);
+    border:3px solid #999;
+    padding:20px;
+    border-radius:9px;
+    background-color:#222;
+    
+    width:255px;
+}
+button{
+    width:50px;
+    height:40px;
+    margin:10px 5px 5px 5px;
+    background-color:#444;
+    border:none;
+    color:#c0c0c0;
+    outline:none;
+    background-color:#473;
+}
+button:hover{
+    background-color:#333;
+}
+#i0{
+
+    height:230xp;
+    margin:none;
+}
+#result{
+    width:233px;
+    height:20px;
+    border:3px solid #999;
+    border-radius:9px;
+    padding:15px 0px 15px 10px;
+    color:#000;
+    margin-bottom:10px;
+    display:block;
+    background-color:white;
+}
+#f{
+    width:115px;
+}
+h1{
+    text-align:center;
+    color:#473;
+    font-family:serif;
+    font-size:30px;
+}
+button.plus{
+    background-color:#d28;
+}
+#ty{
+    background-color:#f80;
+    height:230xp;
+    margin:none ;
+    
+}
+#divide{
+    background-color:#d28;
+}
+#minus{
+    background-color:#d28;
+}
+#times{
+    background-color:#d28;
+}
+#power{
+    background-color:#d28;
+}
+#d{
+    background-color:#d28;
+}
+#t{
+    background-color:#f00;
+}
+#const{
+    background-color:#0f0
+}
+#scop{
+    background-color:#00f;
+}
+#del{
+    background-color:white;
+    color:black;
+}
+</style> 
+ </head> 
+ <body> 
+  <div id="par"> 
+   <div id="result"></div> 
+   <button onclick="a(1)">1</button> 
+   <button onclick="a(2)">2</button> 
+   <button onclick="a(3)">3</button> 
+   <button id="del" onclick="del()">AC</button> 
+   <br> 
+   <button onclick="a(4)">4</button> 
+   <button onclick="a(5)">5</button> 
+   <button onclick="a(6)">6</button> 
+   <button id="times" onclick="a('*')">×</button> 
+   <br> 
+   <button onclick="a(7)">7</button> 
+   <button onclick="a(8)">8</button> 
+   <button onclick="a(9)">9</button> 
+   <button class="plus" onclick="a('+')">+</button> 
+   <br> 
+   <button id="f" onclick="a('**')">^</button> 
+   <button id="f" onclick="a('%')">%</button> 
+   <button id="f" onclick="a('/')">÷</button> 
+   <button id="f" onclick="a('-')">–</button> 
+   <br> 
+   <button onclick="a('.')">.</button> 
+   <button id="i0" onclick="a(0)">0</button> 
+   <button id="del" onclick="back()">&lt;</button> 
+   <button id="ty" onclick="eq()">=</button> 
+   <br> 
+   <button id="scop" onclick="a('(')">(</button> 
+   <button id="scop" onclick="a(')')">)</button> 
+   <button id="const" onclick="a(Math.PI)">pi</button> 
+   <br> 
+   <button id="t" onclick="a('sin(')">sin</button> 
+   <button id="t" onclick="a('cos(')">cos</button> 
+   <button id="t" onclick="a('tan(')">tan</button> 
+   <button id="t" onclick="a('cot(')">cot</button> 
+   <br> 
+   <button id="t" onclick="a('asin(')">asin</button> 
+   <button id="t" onclick="a('acos(')">acos</button> 
+   <button id="t" onclick="a('atan(')">atan</button> 
+   <button id="t" onclick="a('acot(')">acot</button> 
+  </div>   
+  <footer> 
+   <p class="programminghero">Learned and developed this site with <a href="http://www.programming-hero.com">Programming Hero</a></p> 
+  </footer>
+ </body>
 </html>
